@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="de">
+
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niklas K&uuml;chen &dash; Data Science, Machine Learning und AI</title>
+    <title>My Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
+
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <header class="bg-blue-600 text-white py-4">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Niklas K&uuml;chen &dash; Data Science, Machine Learning und AI</h1>
+            <h1 class="text-2xl font-bold">Niklas K&uuml;chen &dash; Data Science, Machine Learning, Backend and AI</h1>
             <nav>
                 <ul class="flex space-x-4">
                     <li><a href="#" class="hover:underline">Home</a></li>
                     <li><a href="#skills" class="hover:underline">Skills</a></li>
-                    <li><a href="#projects" class="hover:underline">Projekte</a></li>
-                    <li><a href="#contact" class="hover:underline">Kontakt</a></li>
+                    <li><a href="#projects" class="hover:underline">Projects</a></li>
+                    <li><a href="#education" class="hover:underline">Education</a></li>
+                    <li><a href="#work" class="hover:underline">Work</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,58 +34,456 @@
         <!-- Hero Section -->
         <section class="text-center mb-10">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h2>
-            <p class="text-lg text-gray-600">I'm a data scientist and machine learning enthusiast with a passion for building impactful projects.</p>
+            <p class="text-lg text-gray-600">I'm a data scientist and machine learning enthusiast with a passion for
+                learning new technologies and building projects.</p>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="mb-10">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-4">My Skills</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-xl font-bold text-blue-600">Python</h4>
-                    <p class="text-gray-600">Experience in data analysis, machine learning, and backend development.</p>
+            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Skills</h3>
+
+            <!-- Technology Skills Section -->
+            <h4 class="text-2xl font-semibold text-gray-800 mb-6">Technologies</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Python Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Python</span>
+                        </div>
+                        <span class="text-gray-600">4/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 80%;"></div>
+                    </div>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-xl font-bold text-blue-600">Data Science</h4>
-                    <p class="text-gray-600">Skilled in Pandas, NumPy, and visualization tools like Matplotlib and Seaborn.</p>
+                <!-- Pandas Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                                alt="Pandas Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Pandas</span>
+                        </div>
+                        <span class="text-gray-600">4/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 80%;"></div>
+                    </div>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-xl font-bold text-blue-600">Machine Learning</h4>
-                    <p class="text-gray-600">Proficient in Scikit-learn, TensorFlow, and building predictive models.</p>
+                <!-- Polars Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <div class="flex items-center">
+                                <img src="../static/logos/Polars.svg" alt="MLflow Logo" class="h-6 w-6 mr-2">
+                                <span class="text-lg font-medium text-blue-600">Polars</span>
+                            </div>
+                        </div>
+                        <span class="text-gray-600">4/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <!-- Flask Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                                alt="Flask Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Flask</span>
+                        </div>
+                        <span class="text-gray-600">4/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <!-- PostreSQL Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                alt="PostgreSQL Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">PostreSQL</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Docker Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                alt="Docker Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Docker</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Terraform Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                                alt="Terrafirm Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Terraform</span>
+                        </div>
+                        <span class="text-gray-600">2/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <!-- MLflow Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="../static/logos/MLflow.svg" alt="MLflow Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">MLflow</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- NumPy Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                                alt="NumPy Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">NumPy</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Plotly Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg"
+                                alt="Plotly Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Plotly</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Scikit-learn Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                                alt="Scikit-learn Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Scikit-learn</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Scikit-survival Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-lg font-medium text-blue-600">Scikit-survival</span>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- PyTorch Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                alt="PyTorch Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">PyTorch</span>
+                        </div>
+                        <span class="text-gray-600">2/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <!-- Google Cloud Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                alt="Google Cloud Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Google Cloud</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Docker Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                alt="Docker Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Docker</span>
+                        </div>
+                        <span class="text-gray-600">3/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <!-- Java Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="Java Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Java</span>
+                        </div>
+                        <span class="text-gray-600">2/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <!-- Kubernetes Skill -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <div class="flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg"
+                                alt="Kubernetes Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">Kubernetes</span>
+                        </div>
+                        <span class="text-gray-600">1/5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- Language -->
+            <h4 class="text-2xl font-semibold text-gray-800 mb-6">Languages</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- German -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-lg font-medium text-blue-600">🇩🇪 German</span>
+                        <span class="text-gray-600">mother tongue</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- English -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-lg font-medium text-blue-600">🇬🇧 English</span>
+                        <span class="text-gray-600">C2 level</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5">
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 80%;"></div>
+                    </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Projects Section -->
         <section id="projects" class="mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Projects</h3>
             <ul>
                 <li class="mb-4">
-                    <a href="#" class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
-                        <h4 class="text-xl font-bold text-blue-600">Project 1</h4>
-                        <p class="text-gray-600">Description of the first project, explaining its purpose and tools used.</p>
-                    </a>
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>November 2023</b> Python Programming Exercise for First-Semester Students
+                        </h4>
+                        <p class="text-gray-600">
+                            Developed a comprehensive Python programming exercise for first-semester students where they
+                            had to implement simple encryption and decryption algorithms.
+                        </p>
+                    </div>
                 </li>
                 <li class="mb-4">
-                    <a href="#" class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
-                        <h4 class="text-xl font-bold text-blue-600">Project 2</h4>
-                        <p class="text-gray-600">Description of the second project, focusing on challenges solved.</p>
-                    </a>
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>March 2023</b> User Authentication for Kubeflow with AD over Keycloak
+                        </h4>
+                        <p class="text-gray-600">
+                            Integrated Active Directory as an authentication method for Kubeflow using Keycloak.
+                        </p>
+                    </div>
                 </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>November 2022</b> VRcher
+                        </h4>
+                        <p class="text-gray-600">
+                            Created a VR archery game in Unity using C#.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>June 2021</b> ImageCoder
+                        </h4>
+                        <p class="text-gray-600">
+                            Built a steganography tool that encodes a message in an image with Java.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>November 2020</b> ESP8266 Air Sensor
+                        </h4>
+                        <p class="text-gray-600">
+                            Designed and built an ESP8266-based temperature, humidity and air pressure logger using C++.
+                            Built a custom back- and frontend using PHP.
+                        </p>
+                    </div>
+                </li>
+
             </ul>
         </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-10">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🎓</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Master's Degree in Computer Science focused on
+                            Machine Learning</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, October 2024 -
+                            present</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🎓</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Bachelor's Degree in Computer Science</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, March 2019 -
+                            June 2024</p>
+                        <p class="text-gray-600">
+                        <p>Thesis: "Optimization of Prediction Models for Battery Life Forecasting in IoT Devices using
+                            Augmented
+                            Data"</p>
+                        <p><b>1.4</b></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🏫</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">A-Level</h4>
+                        <p class="text-black-600">Gymnasium in der Taus Backnang, September 2010 - June 2018</p>
+                        <p><b>2.0</b></p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🚸</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Primary School</h4>
+                        <p class="text-black-600">Mörikeschule Backnang, August 2006 - August 2010</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work" class="mb-10">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Work Experience</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">👨🏼‍💻</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Working Student Data Management and Analysis</h4>
+                        <p class="text-black-600">inovex GmbH, September 2022 - Present</p>
+                        <p class="text-gray-600">
+                            - Working at the research project DeKIOPs for the democratization of AI Operations. <br>
+                            - Creating prediction models to reduce battery waste in sensor logging devices.
+                            - Using Pandas, Polars, Scikit-learn, Scikit-survival, Flask, Plotly.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">👨🏼‍🏫</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Tutor for Python Programming</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, October 2023 -
+                            February 2024 </p>
+                        <p class="text-gray-600">
+                            - Helped data science students in their first semester to learn Programming in Python.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">👨🏼‍💻</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Practical Semester Data Management and Analysis</h4>
+                        <p class="text-black-600">inovex GmbH, April 2022 - August 2022 </p>
+                        <p class="text-gray-600">
+                            - Worked in the research project "Service-Meister", helping to create a predictive
+                            maintenance platform. <br>
+                            - Used Pandas, Scikit-learn and NLTK to categorize and cluster the maintenance descriptions.
+                            <br>
+                            - Used Flask, MlFlow, Docker, Terraform, Gitlab CI/CD, PostgreSQL to build a backend
+                            infrastructure.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">👨🏼‍🏫</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Tutor for Java Programming</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, October 2019 -
+                            February 2022 </p>
+                        <p class="text-gray-600">
+                            - Helped computer science students in their first semester to learn Programming in Java.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- Contact Section -->
         <section id="contact">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Contact Me</h3>
-            <p class="text-gray-600">Feel free to reach out to me via <a href="mailto:example@example.com" class="text-blue-600 hover:underline">email</a>.</p>
+            <p class="text-gray-600">Feel free to reach out to me via <a href="mailto:niklas@kuechen.dev"
+                    class="text-blue-600 hover:underline">email</a>.</p>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2024 Niklas Küchen. All rights reserved.</p>
         </div>
     </footer>
 </body>
+
 </html>
