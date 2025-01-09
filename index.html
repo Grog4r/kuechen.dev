@@ -9,14 +9,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        // Toggle mobile menu visibility
+        function toggleMenu() {
+            const nav = document.getElementById('mobile-menu');
+            nav.classList.toggle('hidden');
+        }
+    </script>
 </head>
 
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <header class="bg-blue-600 text-white py-4">
+    <header class="bg-blue-600 text-white py-4 fixed top-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Niklas K&uuml;chen &dash; Data Science, Machine Learning and AI</h1>
-            <nav>
+            <!-- Logo or Title -->
+            <h1 class="text-2xl font-bold">
+                Niklas K&uuml;chen
+                <span class="hidden md:inline">&dash; Data Science, Machine Learning and AI</span>
+            </h1>
+
+            <!-- Hamburger Icon for Mobile -->
+            <button class="md:hidden block p-3 transition-transform transform hover:scale-110" onclick="toggleMenu()">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden md:block">
                 <ul class="flex space-x-4">
                     <li><a href="#" class="hover:underline">Home</a></li>
                     <li><a href="#skills" class="hover:underline">Skills</a></li>
@@ -27,18 +45,40 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-blue-700">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#skills" class="hover:underline">Skills</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
+                <li><a href="#education" class="hover:underline">Education</a></li>
+                <li><a href="#work" class="hover:underline">Work</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container mx-auto py-10 px-6">
+    <!-- Main content with responsive padding -->
+    <main class="container mx-auto py-10 px-6 pt-16 md:pt-20">
         <!-- Hero Section -->
-        <section class="text-center mb-10">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h2>
-            <p class="text-lg text-gray-600">I'm a data scientist and machine learning enthusiast with a passion for
-                learning new technologies and building projects.</p>
+        <section class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h2>
+                <p class="text-lg text-gray-600">I'm a data scientist and machine learning enthusiast with a passion for
+                    learning new technologies and building projects.</p>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <img src="static/images/me.jpg" alt="My Image"
+                    class="w-40 h-40 rounded-full object-cover shadow-lg md:w-60 md:h-60">
+            </div>
         </section>
 
-        <section id="skills" class="mb-10">
+
+        <section id="skills" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-6">Skills</h3>
+            <p class="text-lg text-gray-600">These are my most useful technological skills and the languages
+                i speak.</p>
 
             <!-- Technology Skills Section -->
             <h4 class="text-2xl font-semibold text-gray-800 mb-6">Technologies</h4>
@@ -308,7 +348,7 @@
 
 
         <!-- Projects Section -->
-        <section id="projects" class="mb-10">
+        <section id="projects" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Projects</h3>
             <ul>
                 <li class="mb-4">
@@ -367,53 +407,9 @@
             </ul>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="mb-10">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Education</h3>
-            <div class="space-y-6">
-                <div class="p-6 bg-white rounded-lg shadow flex items-start">
-                    <span class="text-3xl mr-4">🎓</span>
-                    <div>
-                        <h4 class="text-xl font-bold text-blue-600">Master's Degree in Computer Science focused on
-                            Machine Learning</h4>
-                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, October 2024 -
-                            present</p>
-                    </div>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow flex items-start">
-                    <span class="text-3xl mr-4">🎓</span>
-                    <div>
-                        <h4 class="text-xl font-bold text-blue-600">Bachelor's Degree in Computer Science</h4>
-                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, March 2019 -
-                            June 2024</p>
-                        <p class="text-gray-600">
-                        <p>Thesis: "Optimization of Prediction Models for Battery Life Forecasting in IoT Devices using
-                            Augmented
-                            Data"</p>
-                        <p><b>1.4</b></p>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow flex items-start">
-                    <span class="text-3xl mr-4">🏫</span>
-                    <div>
-                        <h4 class="text-xl font-bold text-blue-600">A-Level</h4>
-                        <p class="text-black-600">Gymnasium in der Taus Backnang, September 2010 - June 2018</p>
-                        <p><b>2.0</b></p>
-                    </div>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow flex items-start">
-                    <span class="text-3xl mr-4">🚸</span>
-                    <div>
-                        <h4 class="text-xl font-bold text-blue-600">Primary School</h4>
-                        <p class="text-black-600">Mörikeschule Backnang, August 2006 - August 2010</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Work Experience Section -->
-        <section id="work" class="mb-10">
+        <section id="work" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Work Experience</h3>
             <div class="space-y-6">
                 <div class="p-6 bg-white rounded-lg shadow flex items-start">
@@ -469,21 +465,66 @@
         </section>
 
 
+        <!-- Education Section -->
+        <section id="education" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🎓</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Master's Degree in Computer Science focused on
+                            Machine Learning</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, October 2024 -
+                            present</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🎓</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Bachelor's Degree in Computer Science</h4>
+                        <p class="text-black-600">Hochschule Karlsruhe - University of Applied Sciences, March 2019 -
+                            June 2024</p>
+                        <p class="text-gray-600">
+                        <p>Thesis: "Optimization of Prediction Models for Battery Life Forecasting in IoT Devices using
+                            Augmented
+                            Data"</p>
+                        <p><b>1.4</b></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🏫</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">A-Level</h4>
+                        <p class="text-black-600">Gymnasium in der Taus Backnang, September 2010 - June 2018</p>
+                        <p><b>2.0</b></p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow flex items-start">
+                    <span class="text-3xl mr-4">🚸</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-blue-600">Primary School</h4>
+                        <p class="text-black-600">Mörikeschule Backnang, August 2006 - August 2010</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Contact Me</h3>
             <p class="text-gray-600">Feel free to reach out to me via
                 <a id="mlink" href="#" class="text-blue-600 hover:underline">email</a> or
                 <a href="https://www.linkedin.com/in/niklas-küchen" class="text-blue-600 hover:underline">LinkedIn</a>.
             </p>
+            <script>
+                var me = "niklas";
+                var place = "kuechen.dev";
+                var mlink = document.getElementById("mlink");
+                mlink.href = `mailto:${me}@${place}`;
+            </script>
         </section>
-        <script>
-            var me = "niklas";
-            var place = "kuechen.dev";
-            var mlink = document.getElementById("mlink");
-            mlink.href = `mailto:${me}@${place}`;
-        </script>
     </main>
 
     <footer class="bg-gray-800 text-white py-4">
