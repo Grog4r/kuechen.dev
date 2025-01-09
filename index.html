@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -472,11 +473,17 @@
         <!-- Contact Section -->
         <section id="contact">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Contact Me</h3>
-            <p class="text-gray-600">Feel free to reach out to me via 
-                <a href="mailto:niklas@kuechen.dev" class="text-blue-600 hover:underline">email</a> or 
-                <a href="www.linkedin.com/in/niklas-küchen"class="text-blue-600 hover:underline">LinkedIn</a>.
+            <p class="text-gray-600">Feel free to reach out to me via
+                <a id="mlink" href="#" class="text-blue-600 hover:underline">email</a> or
+                <a href="www.linkedin.com/in/niklas-küchen" class="text-blue-600 hover:underline">LinkedIn</a>.
             </p>
         </section>
+        <script>
+            var me = "niklas";
+            var place = "kuechen.dev";
+            var mlink = document.getElementById("mlink");
+            mlink.href = `mailto:${me}@${place}`;
+        </script>
     </main>
 
     <footer class="bg-gray-800 text-white py-4">
