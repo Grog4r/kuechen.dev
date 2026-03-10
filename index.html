@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niklas K&uuml;chen &dash; Data Science, Machine Learning and AI</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
         // Toggle mobile menu visibility
@@ -18,27 +16,24 @@
     </script>
 </head>
 
-
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <header class="bg-blue-600 text-white py-4 fixed top-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <!-- Logo or Title -->
             <h1 class="text-2xl font-bold">
                 Niklas K&uuml;chen
                 <span class="hidden md:inline">&dash; Data Science, Machine Learning and AI</span>
             </h1>
 
-            <!-- Hamburger Icon for Mobile -->
             <button class="md:hidden block p-3 transition-transform transform hover:scale-110" onclick="toggleMenu()">
                 <span class="material-icons">menu</span>
             </button>
 
-            <!-- Navigation Menu -->
             <nav class="hidden md:block">
                 <ul class="flex space-x-4">
                     <li><a href="#" class="hover:underline">Home</a></li>
                     <li><a href="#skills" class="hover:underline">Skills</a></li>
-                    <li><a href="#projects" class="hover:underline">Projects</a></li>
+                    <li><a href="#work-projects" class="hover:underline">Work Projects</a></li>
+                    <li><a href="#projects" class="hover:underline">Private Projects</a></li>
                     <li><a href="#education" class="hover:underline">Education</a></li>
                     <li><a href="#publications" class="hover:underline">Publications</a></li>
                     <li><a href="#work" class="hover:underline">Work</a></li>
@@ -47,12 +42,12 @@
             </nav>
         </div>
 
-        <!-- Mobile Menu -->
         <nav id="mobile-menu" class="md:hidden hidden bg-blue-700">
             <ul class="flex flex-col space-y-2 p-4">
                 <li><a href="#" class="hover:underline">Home</a></li>
                 <li><a href="#skills" class="hover:underline">Skills</a></li>
-                <li><a href="#projects" class="hover:underline">Projects</a></li>
+                <li><a href="#work-projects" class="hover:underline">Work Projects</a></li>
+                <li><a href="#projects" class="hover:underline">Private Projects</a></li>
                 <li><a href="#education" class="hover:underline">Education</a></li>
                 <li><a href="#publications" class="hover:underline">Publications</a></li>
                 <li><a href="#work" class="hover:underline">Work</a></li>
@@ -61,9 +56,7 @@
         </nav>
     </header>
 
-    <!-- Main content with responsive padding -->
     <main class="container mx-auto py-10 px-6 pt-16 md:pt-20">
-        <!-- Hero Section -->
         <section class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h2>
@@ -82,10 +75,8 @@
             <p class="text-lg text-gray-600">These are my most useful technological skills and the languages
                 i speak.</p>
 
-            <!-- Technology Skills Section -->
             <h4 class="text-2xl font-semibold text-gray-800 mb-6">Technologies</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Python Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -100,7 +91,6 @@
                     </div>
                 </div>
 
-                <!-- Pandas Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -115,12 +105,11 @@
                     </div>
                 </div>
 
-                <!-- Polars Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
                             <div class="flex items-center">
-                                <img src="./static/logos/Polars.svg" alt="MLflow Logo" class="h-6 w-6 mr-2">
+                                <img src="./static/logos/Polars.svg" alt="Polars Logo" class="h-6 w-6 mr-2">
                                 <span class="text-lg font-medium text-blue-600">Polars</span>
                             </div>
                         </div>
@@ -131,7 +120,6 @@
                     </div>
                 </div>
 
-                <!-- Flask Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -146,7 +134,6 @@
                     </div>
                 </div>
 
-                <!-- Linux / Bash Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -161,7 +148,6 @@
                     </div>
                 </div>
 
-                <!-- Git & CI/CD Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -176,7 +162,6 @@
                     </div>
                 </div>
 
-                <!-- Technical Writing Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -189,7 +174,6 @@
                     </div>
                 </div>
 
-                <!-- PostreSQL Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -204,7 +188,6 @@
                     </div>
                 </div>
 
-                <!-- Docker Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -219,7 +202,6 @@
                     </div>
                 </div>
 
-                <!-- MLflow Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -233,7 +215,6 @@
                     </div>
                 </div>
 
-                <!-- NumPy Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -248,7 +229,6 @@
                     </div>
                 </div>
 
-                <!-- Plotly Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -263,7 +243,6 @@
                     </div>
                 </div>
 
-                <!-- Scikit-learn Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -278,7 +257,6 @@
                     </div>
                 </div>
 
-                <!-- Scikit-survival Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <span class="text-lg font-medium text-blue-600">Scikit-survival</span>
@@ -289,7 +267,6 @@
                     </div>
                 </div>
 
-                <!-- Google Cloud Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -304,13 +281,12 @@
                     </div>
                 </div>
 
-                <!-- Docker Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                alt="Docker Logo" class="h-6 w-6 mr-2">
-                            <span class="text-lg font-medium text-blue-600">Docker</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                alt="PyTorch Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">PyTorch</span>
                         </div>
                         <span class="text-gray-600">3/5</span>
                     </div>
@@ -319,22 +295,20 @@
                     </div>
                 </div>
 
-                <!-- PyTorch Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
-                                alt="PyTorch Logo" class="h-6 w-6 mr-2">
-                            <span class="text-lg font-medium text-blue-600">PyTorch</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
+                                alt="Spark Logo" class="h-6 w-6 mr-2">
+                            <span class="text-lg font-medium text-blue-600">PySpark / Spark</span>
                         </div>
-                        <span class="text-gray-600">2/5</span>
+                        <span class="text-gray-600">3/5</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-5">
-                        <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
+                        <div class="bg-blue-600 h-5 rounded-full" style="width: 60%;"></div>
                     </div>
                 </div>
 
-                <!-- Prometheus + Grafana Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -349,7 +323,6 @@
                     </div>
                 </div>
 
-                <!-- Java Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -364,7 +337,6 @@
                     </div>
                 </div>
 
-                <!-- Terraform Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -378,16 +350,15 @@
                         <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
                     </div>
                 </div>
-                <!-- HTML/JS/CSS Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                                 alt="HTML Logo" class="h-6 w-6 mr-2">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                alt="HTML Logo" class="h-6 w-6 mr-2">
+                                alt="JS Logo" class="h-6 w-6 mr-2">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                alt="HTML Logo" class="h-6 w-6 mr-2">
+                                alt="CSS Logo" class="h-6 w-6 mr-2">
                             <span class="text-lg font-medium text-blue-600">HTML, JavaScript, CSS</span>
                         </div>
                         <span class="text-gray-600">2/5</span>
@@ -396,7 +367,6 @@
                         <div class="bg-blue-600 h-5 rounded-full" style="width: 40%;"></div>
                     </div>
                 </div>
-                <!-- Kubernetes Skill -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <div class="flex items-center">
@@ -413,10 +383,8 @@
             </div>
             <br><br>
 
-            <!-- Language -->
             <h4 class="text-2xl font-semibold text-gray-800 mb-6">Languages</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- German -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <span class="text-lg font-medium text-blue-600">🇩🇪 German</span>
@@ -427,7 +395,6 @@
                     </div>
                 </div>
 
-                <!-- English -->
                 <div>
                     <div class="flex justify-between mb-1">
                         <span class="text-lg font-medium text-blue-600">🇬🇧 English</span>
@@ -440,11 +407,46 @@
             </div>
         </section>
 
-
-        <!-- Projects Section -->
-        <section id="projects" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
-            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Projects</h3>
+        <section id="work-projects" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Work Projects</h3>
             <ul>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>September 2023 - October 2025</b> DeKIOps
+                        </h4>
+                        <p class="text-gray-600">
+                            Developing ML algorithms for predicting the remaining lifetime of batteries in iot devices and building a flask backend on the GCP.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>April 2022 - September 2023</b> Servicemeister ESW
+                        </h4>
+                        <p class="text-gray-600">
+                            Building an intelligent service ticket system with a microservice flask backend on the GCP running multiple automatic machine learning services including NLP classification of maintenance reports.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="projects" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Private and university projects</h3>
+            <ul>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
+                        <h4 class="text-xl font-bold text-blue-600">
+                            <b>February 2026</b> Private Cloud Migration and Docker Container Upgrade
+                        </h4>
+                        <p class="text-gray-600">
+                            Major private cloud migration and upgrade to Docker Containers on a privately hosted Ubuntu Server on a Thinkcentre Tiny. Included setting up automatic nightly encrypted backups to a remote location via a wireguard VPN using autorestic, Nextcloud, Cloudflare, and monitoring with Uptime Kuma and Beszel.
+                        </p>
+                    </div>
+                </li>
                 <li class="mb-4">
                     <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50">
                         <h4 class="text-xl font-bold text-blue-600">
@@ -534,7 +536,6 @@
         </section>
 
 
-        <!-- Work Experience Section -->
         <section id="work" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Work Experience</h3>
             <div class="space-y-6">
@@ -591,7 +592,6 @@
         </section>
 
 
-        <!-- Education Section -->
         <section id="education" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Education</h3>
             <div class="space-y-6">
@@ -636,7 +636,6 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
         <section id="publications" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Publications & Conferences</h3>
             <ul>
@@ -663,7 +662,6 @@
         </section>
 
 
-        <!-- Contact Section -->
         <section id="contact" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Contact Me</h3>
             <p class="text-gray-600">Feel free to reach out to me via
@@ -681,7 +679,7 @@
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Niklas Küchen. All rights reserved.</p>
+            <p>&copy; 2026 Niklas Küchen. All rights reserved.</p>
         </div>
     </footer>
 </body>
