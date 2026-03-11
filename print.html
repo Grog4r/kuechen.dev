@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niklas K&uuml;chen &dash; Data Science, Machine Learning and AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        @media print {
+            @page { margin: 1cm 1.5cm; }
+            body { background: white !important; font-size: 10pt; line-height: 1.3; color: black; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            
+            /* Hide web-only elements */
+            header nav, header button, footer, .web-contact { display: none !important; }
+            
+            /* Reset Layout */
+            header { position: relative !important; background: transparent !important; color: black !important; padding: 0 0 10px 0 !important; border-bottom: 2px solid black; margin-bottom: 15px; }
+            header h1 { color: black !important; font-size: 18pt !important; }
+            main { padding: 0 !important; margin: 0 !important; }
+            section { background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 15px !important; }
+            .shadow, .shadow-lg { box-shadow: none !important; }
+            
+            /* Typography */
+            h2 { font-size: 14pt !important; margin-bottom: 5px !important; color: black !important; }
+            h3 { font-size: 14pt !important; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-bottom: 8px !important; text-align: left !important; color: black !important; }
+            h4 { font-size: 11pt !important; margin-bottom: 2px !important; color: black !important; }
+            p { color: #333 !important; margin-bottom: 4px !important; }
+            
+            /* Compact Hero Section */
+            .print-hero { display: flex; flex-direction: row; text-align: left; align-items: center; justify-content: space-between; margin-bottom: 15px !important; }
+            .print-hero > div { flex: 1; pr-4 }
+            .print-hero img { width: 90px !important; height: 90px !important; margin: 0 !important; box-shadow: none !important; }
+            
+            /* Compact Skills */
+            .skills-grid { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 8px 15px !important; margin-bottom: 10px !important; }
+            .skills-lang-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 8px 15px !important; }
+            .skill-item { break-inside: avoid; }
+            .skill-bar-container { height: 6px !important; margin-bottom: 2px; }
+            .skill-bar { height: 6px !important; }
+            .skill-text { font-size: 9pt !important; }
+            .skill-icon { width: 14px !important; height: 14px !important; }
+            
+            /* Lists and Block Layouts */
+            ul { margin: 0 !important; padding: 0 !important; }
+            li { list-style: none !important; break-inside: avoid; margin-bottom: 8px !important; }
+            .block-item { padding: 0 !important; background: transparent !important; border: none !important; }
+            
+            /* Work & Education Items */
+            .icon-wrapper { display: none !important; } /* Hide emojis in print */
+            .experience-item { break-inside: avoid; padding: 0 !important; margin-bottom: 10px !important; }
+            
+            /* Contact Text */
+            .print-contact { display: block !important; margin-top: 5px; font-weight: bold; }
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobile-menu');
+            nav.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <header class="bg-blue-600 text-white py-4 fixed top-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold">
+                Niklas K&uuml;chen
+                <span class="hidden md:inline">&dash; Data Science, Machine Learning and AI</span>
+            </h1>
+            <button class="md:hidden block p-3 transition-transform transform hover:scale-110" onclick="toggleMenu()">
+                <span class="material-icons">menu</span>
+            </button>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#skills" class="hover:underline">Skills</a></li>
+                    <li><a href="#work-projects" class="hover:underline">Work Projects</a></li>
+                    <li><a href="#projects" class="hover:underline">Private Projects</a></li>
+                    <li><a href="#education" class="hover:underline">Education</a></li>
+                    <li><a href="#work" class="hover:underline">Experience</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav id="mobile-menu" class="md:hidden hidden bg-blue-700">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#skills" class="hover:underline">Skills</a></li>
+                <li><a href="#work-projects" class="hover:underline">Work Projects</a></li>
+                <li><a href="#projects" class="hover:underline">Private Projects</a></li>
+                <li><a href="#education" class="hover:underline">Education</a></li>
+                <li><a href="#work" class="hover:underline">Experience</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 px-6 pt-16 md:pt-20">
+        
+        <section class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10 print-hero">
+            <div class="text-left">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Summary</h2>
+                <p class="text-lg text-gray-600">I'm a data scientist and machine learning enthusiast with a passion for
+                    learning new technologies and building projects.</p>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <img src="static/images/me.jpg" alt="Niklas Küchen"
+                    class="w-40 h-40 rounded-full object-cover shadow-lg md:w-60 md:h-60">
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-6">Skills</h3>
+
+            <h4 class="text-xl font-semibold text-gray-800 border-b border-gray-200 pb-1 mb-4">Machine Learning, Data Science &amp; AI</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8 skills-grid">
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Python</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Pandas</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Polars</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">NumPy</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Scikit-learn</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Scikit-survival</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Plotly</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">PyTorch</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">LangChain / GenAI</span><span class="text-gray-600 text-sm">2/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 40%;"></div></div>
+                </div>
+            </div>
+
+            <h4 class="text-xl font-semibold text-gray-800 border-b border-gray-200 pb-1 mb-4">Data Engineering, DevOps &amp; Cloud</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8 skills-grid">
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Linux / Bash</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Git &amp; CI/CD</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Docker</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Google Cloud</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">PostgreSQL</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">PySpark / Spark</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">MLflow</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Kubernetes</span><span class="text-gray-600 text-sm">2/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 40%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Terraform</span><span class="text-gray-600 text-sm">2/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 40%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Grafana</span><span class="text-gray-600 text-sm">2/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 40%;"></div></div>
+                </div>
+            </div>
+
+            <h4 class="text-xl font-semibold text-gray-800 border-b border-gray-200 pb-1 mb-4">Software Engineering &amp; Languages</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-4 skills-grid">
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Flask</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">FastAPI</span><span class="text-gray-600 text-sm">3/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Tech Writing</span><span class="text-gray-600 text-sm">4/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">Java</span><span class="text-gray-600 text-sm">2/5</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 40%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">German</span><span class="text-gray-600 text-sm">Native</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="flex justify-between mb-1 items-center"><span class="font-medium text-blue-600 skill-text">English</span><span class="text-gray-600 text-sm">C1</span></div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 skill-bar-container"><div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Work Experience</h3>
+            <div class="space-y-4">
+                <div class="p-4 bg-white rounded-lg shadow flex items-start experience-item">
+                    <span class="text-2xl mr-4 icon-wrapper">👨🏼‍💻</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-600">Working Student Data Management and Analysis</h4>
+                        <p class="text-gray-800 font-medium">inovex GmbH, Sept 2022 - Present</p>
+                        <p class="text-gray-600 mt-1">
+                            &bull; Working at the research project DeKIOPs for the democratization of AI Operations.<br>
+                            &bull; Creating prediction models to reduce battery waste in sensor logging devices using Pandas, Polars, Scikit-learn, Scikit-survival, Flask, Plotly.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow flex items-start experience-item">
+                    <span class="text-2xl mr-4 icon-wrapper">👨🏼‍💻</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-600">Practical Semester Data Management and Analysis</h4>
+                        <p class="text-gray-800 font-medium">inovex GmbH, April 2022 - August 2022</p>
+                        <p class="text-gray-600 mt-1">
+                            &bull; Worked in the research project "Service-Meister", helping to create a predictive maintenance platform.<br>
+                            &bull; Categorized maintenance descriptions with NLP and built backend infrastructure using Flask, MLflow, Docker, Terraform, Gitlab CI/CD, PostgreSQL.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow flex items-start experience-item">
+                    <span class="text-2xl mr-4 icon-wrapper">👨🏼‍🏫</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-600">Programming Tutor (Python &amp; Java)</h4>
+                        <p class="text-gray-800 font-medium">Hochschule Karlsruhe - University of Applied Sciences, Oct 2019 - Feb 2024</p>
+                        <p class="text-gray-600 mt-1">
+                            &bull; Instructed and supported first-semester Data Science and Computer Science students in learning foundational Python and Java programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-projects" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Work Projects</h3>
+            <ul>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>Sept 2023 - Oct 2025</b> | DeKIOps
+                        </h4>
+                        <p class="text-gray-600">
+                            Engineered and deployed ML algorithms to predict the remaining lifetime of batteries in IoT devices. Built and maintained a scalable Flask backend infrastructure on Google Cloud Platform (GCP).
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>April 2022 - Sept 2023</b> | Servicemeister ESW
+                        </h4>
+                        <p class="text-gray-600">
+                            Built an intelligent service ticket system utilizing a microservice architecture on GCP. Orchestrated multiple automated machine learning pipelines, including NLP classification of maintenance reports via a Flask backend.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Private &amp; University Projects</h3>
+            <ul>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>Feb 2026</b> | Private Cloud Migration and Docker Container Upgrade
+                        </h4>
+                        <p class="text-gray-600">
+                            Executed a major private cloud migration by upgrading systems to Docker Containers on a self-hosted Ubuntu Server. Engineered automatic nightly encrypted backups via WireGuard VPN using autorestic, Nextcloud, Cloudflare, and full-stack monitoring with Uptime Kuma and Beszel.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>Sept 2025</b> | Multi-Agent LLM for Startup Ideas
+                        </h4>
+                        <p class="text-gray-600">
+                            Used LangChain and LangGraph together with ChainLit to build a multi-agent LLM chat that refines and develops startup ideas.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>Sept 2024</b> | ESP32 E-Ink Weather &amp; Transit Display
+                        </h4>
+                        <p class="text-gray-600">
+                            Paired an e-ink display with an ESP32 to show weather and public transit information. A locally hosted FastAPI server aggregates data from public APIs.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="block p-4 bg-white rounded-lg shadow hover:bg-blue-50 block-item">
+                        <h4 class="text-lg font-bold text-blue-600">
+                            <b>2020 - today</b> | Self-Hosted Nextcloud &amp; Custom Backup Solution
+                        </h4>
+                        <p class="text-gray-600">
+                            Maintained a public-facing Nextcloud instance locally on a RaspberryPi. Developed a custom cron-based backup solution to sync data over a VPN tunnel to a remote location.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="education" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div class="space-y-4">
+                <div class="p-4 bg-white rounded-lg shadow flex items-start experience-item">
+                    <span class="text-2xl mr-4 icon-wrapper">🎓</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-600">Master's Degree in Computer Science (Machine Learning Focus)</h4>
+                        <p class="text-gray-800 font-medium">Hochschule Karlsruhe - University of Applied Sciences, Oct 2024 - present</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow flex items-start experience-item">
+                    <span class="text-2xl mr-4 icon-wrapper">🎓</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-blue-600">Bachelor's Degree in Computer Science (Grade: 1.4)</h4>
+                        <p class="text-gray-800 font-medium">Hochschule Karlsruhe - University of Applied Sciences, March 2019 - June 2024</p>
+                        <p class="text-gray-600 mt-1">
+                            Thesis: "Optimization of Prediction Models for Battery Life Forecasting in IoT Devices using Augmented Data"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-center text-3xl font-semibold text-gray-800 mb-4">Publications</h3>
+            <ul>
+                <li class="mb-4 block-item">
+                    <h4 class="text-lg font-bold text-blue-600">
+                        <b>2025</b> | Predicting Battery Discharge Behavior for Sparse Data with Augmentation
+                    </h4>
+                    <p class="text-gray-600">
+                        Co-authored at inovex GmbH. Presented at <i>IFIP International Conference on AI Applications and Innovations</i>. Developed a workflow for predicting IoT battery lifetimes. Augmented data improved Integrated Brier Score by up to <b>50.16%</b>. Introduced <i>Mean Divergence Time</i> metric showing reliable predictions for <b>117.76 days</b>.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="text-center bg-gray-50 p-8 rounded-lg shadow-lg mb-10">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4 web-contact">Contact Me</h3>
+            <h3 class="hidden print-contact text-xl font-bold border-none text-blue-600">Contact Information</h3>
+            
+            <p class="text-gray-600 web-contact">Feel free to reach out to me via
+                <a id="mlink" href="#" class="text-blue-600 hover:underline">email</a> or
+                <a href="https://www.linkedin.com/in/niklas-küchen" class="text-blue-600 hover:underline">LinkedIn</a>.
+            </p>
+            
+            <p class="hidden print-contact text-gray-800 font-normal">
+                Email: niklas@kuechen.dev<br>
+                LinkedIn: linkedin.com/in/niklas-küchen
+            </p>
+
+            <script>
+                var me = "niklas";
+                var place = "kuechen.dev";
+                var mlink = document.getElementById("mlink");
+                mlink.href = `mailto:${me}@${place}`;
+            </script>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 web-contact">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2026 Niklas Küchen. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
