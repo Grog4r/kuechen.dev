@@ -122,12 +122,12 @@
 
     <main class="container mx-auto py-10 px-4 md:px-8 pt-24 md:pt-28 max-w-5xl">
         
-        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-8 print-hero border border-gray-100">
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-md mb-8 print-hero border border-gray-200">
             <div class="text-left flex-1">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Niklas Küchen</h2>
                 <h3 class="text-xl text-blue-600 font-medium mb-4 web-only">Data Science, Machine Learning & AI</h3>
                 
-                <div class="flex flex-col gap-1 md:text-lg">
+                <div class="flex flex-col gap-1 md:text-md">
                     <div class="flex items-center gap-2">
                         <span class="material-icons text-sm">location_on</span>
                         <span>Hirschstr. 170, 76137 Karlsruhe</span>
@@ -140,45 +140,47 @@
                         <span class="material-icons text-sm">email</span>
                         <a href="mailto:niklas@kuechen.dev" class="hover:text-blue-600 transition-colors">niklas@kuechen.dev</a>
                     </div>
-                    <!-- <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2">
                         <span class="material-icons text-sm">link</span>
-                        <a href="https://www.linkedin.com/in/niklas-küchen" target="_blank" class="hover:text-blue-600 transition-colors">linkedin.com/in/niklas-küchen</a>
-                    </div> -->
+                        <a href="https://www.linkedin.com/in/niklas-küchen" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">linkedin.com/in/niklas-küchen</a>
+                    </div>
                 </div>
             </div>
             <div class="mt-6 md:mt-0 flex justify-center md:justify-end items-center">
                 <img src="static/images/me.jpg" alt="Niklas Küchen"
-                    class="w-28 h-28 md:w-60 md:-60 rounded-full object-cover shadow-md border-4 border-white">
+                    class="w-28 h-28 md:w-60 md:h-60 rounded-full object-cover shadow-md border-4 border-white">
             </div>
         </section>
 
-        <section id="skills" class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
-            <h3 class="section-title text-2xl font-bold text-gray-900 mb-4 web-only">Technologien & Fähigkeiten</h3>
+        <section id="skills" class="mb-8 break-inside-avoid">
+            <h3 class="section-title text-2xl font-bold text-gray-900 mb-4 web-only border-b-2 border-blue-100 pb-2">Technologien & Fähigkeiten</h3>
             <h3 class="hidden print:block section-title">Technologien & Fähigkeiten</h3>
 
-            <div class="skills-container gap-3">
-                <div class="skill-category">Machine Learning & Data Science</div>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PyTorch</span>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Scikit-learn</span>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Pandas / Polars</span>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">NumPy</span>
-                <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">GenAI / LangChain</span>
+            <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                <div class="skills-container gap-3">
+                    <div class="skill-category">Machine Learning & Data Science</div>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PyTorch</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Scikit-learn</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Pandas / Polars</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">NumPy</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">GenAI / LangChain</span>
 
-                <div class="skill-category mt-3">Data Engineering, DevOps & Cloud</div>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Git & CI/CD</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Google Cloud (GCP)</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">MLflow</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">PySpark / Databricks</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Linux / Bash</span>
-                <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Kubernetes / Terraform</span>
+                    <div class="skill-category mt-3">Data Engineering, DevOps & Cloud</div>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Git & CI/CD</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">GCP</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">MLflow</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">PySpark / Databricks</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">SQL / NoSQL</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Linux / Bash</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Kubernetes / Terraform</span>
 
-                <div class="skill-category mt-3">Softwareentwicklung & Sprachen</div>
-                <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Flask / FastAPI</span>
-                <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Deutsch (Muttersprache)</span>
-                <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Englisch (C2)</span>
+                    <div class="skill-category mt-3">Softwareentwicklung & Sprachen</div>
+                    <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Flask / FastAPI</span>
+                    <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Deutsch (Muttersprache)</span>
+                    <span class="skill-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Englisch (C2)</span>
+                </div>
             </div>
         </section>
 
@@ -188,37 +190,36 @@
             
             <div class="space-y-4">
                 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="timeline-date">Nov 2025<br>-<br>Apr 2026</div>
                     <div class="timeline-content">
-                        <h4 class="text-lg font-bold text-gray-900">Masterand</h4>
+                        <h4 class="text-lg font-bold text-gray-900">Masterthesis</h4>
                         <div class="company text-blue-600 font-medium mb-1">inovex GmbH (Projekt: DEXAI) in Kooperation mit Rational AG</div>
                         <ul class="list-disc ml-5 text-gray-700 space-y-1">
                             <li>Thema: <i>"Moving Beyond Anomaly Detection: A Multidimensional Degradation Trajectory Detection Approach for Predictive Maintenance of Industrial Cooking Appliances"</i></li>
-                            <li>Entwicklung von Modellen zur Erkennung ähnlicher Verschleißmuster in industriellen Kochgeräten.</li>
-                            <li>Trajectory Clustering und Analyse und Entwicklung eines neuen Trajectory-Embedding-Modells.</li>
+                            <li>Entwicklung von Modellen zur Erkennung ähnlicher Verschleißmuster in industriellen Küchengeräten mittels Trajectory Analyse</li>
                             <li><b>Tech-Stack:</b> Databricks, PySpark, PyTorch, Pandas, tslearn, Scikit-learn.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="timeline-date">Aug 2024<br>-<br>Okt 2025</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Werkstudent Data Management & Analysis</h4>
                         <div class="company text-blue-600 font-medium mb-1">inovex GmbH (Projekt: DeKIOps)</div>
                         <ul class="list-disc ml-5 text-gray-700 space-y-1">
                             <li>Entwicklung und Optimierung von Machine-Learning-Algorithmen zur Vorhersage der verbleibenden Lebensdauer (RUL) von IoT-Batterien.</li>
-                            <li>Aufbau, Wartung und Deployment einer skalierbaren Flask-Backend-Infrastruktur auf der GCP.</li>
+                            <li>Aufbau, Wartung und Deployment einer skalierbaren MLOPs Plattform auf der GCP.</li>
                             <li><b>Tech-Stack:</b> Pandas, Polars, Scikit-learn, Scikit-survival, Flask, GCP, PostgreSQL, GitLab CI/CD.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="timeline-date">Apr 2024<br>-<br>Jul 2024</div>
                     <div class="timeline-content">
-                        <h4 class="text-lg font-bold text-gray-900">Bachelorand (Note: 1,0)</h4>
+                        <h4 class="text-lg font-bold text-gray-900">Bachelorthesis (Note: 1,0)</h4>
                         <div class="company text-blue-600 font-medium mb-1">inovex GmbH (Projekt: DeKIOps) in Kooperation mit Testo SE & Co. KGaA</div>
                         <ul class="list-disc ml-5 text-gray-700 space-y-1">
                             <li>Thema: <i>"Optimierung von Vorhersagemodellen für die Batterielebensdauervorhersage in IoT-Geräten mit augmentierten Daten"</i>.</li>
@@ -228,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="timeline-date">Apr 2022<br>-<br>Mar 2024</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Praxissemester und Werkstudent Data Management & Analysis</h4>
@@ -241,7 +242,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="timeline-date">Okt 2019<br>-<br>Feb 2024</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Tutor für Programmierung (Python & Java)</h4>
@@ -261,15 +262,15 @@
                 <h3 class="hidden print:block section-title">Ausbildung</h3>
                 
                 <div class="space-y-4">
-                    <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
-                        <div class="timeline-date">Seit<br>Okt 2024</div>
+                    <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
+                        <div class="timeline-date">Okt 2024<br>-<br>Apr 2026</div>
                         <div class="timeline-content">
                             <h4 class="text-lg font-bold text-gray-900">M.Sc. Informatik (Fokus auf Machine Learning)</h4>
                             <div class="company text-blue-600 font-medium mb-1">Hochschule Karlsruhe - University of Applied Sciences</div>
                             <p class="text-gray-700">Aktueller Notenschnitt: 1,4</p>
                         </div>
                     </div>
-                    <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                    <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                         <div class="timeline-date">Mär 2019<br>-<br>Jun 2024</div>
                         <div class="timeline-content">
                             <h4 class="text-lg font-bold text-gray-900">B.Sc. Informatik</h4>
@@ -284,7 +285,7 @@
                 <h3 class="section-title text-2xl font-bold text-gray-900 mb-4 web-only border-b-2 border-blue-100 pb-2">Publikationen</h3>
                 <h3 class="hidden print:block section-title">Publikationen</h3>
                 
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                     <div class="timeline-date">2025</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900 leading-tight mb-1">Predicting Battery Discharge Behavior for Sparse Data with Augmentation</h4>
@@ -298,32 +299,32 @@
         </div>
 
         <section id="projects" class="mb-4 break-inside-avoid">
-            <h3 class="section-title text-2xl font-bold text-gray-900 mb-4 web-only border-b-2 border-blue-100 pb-2">Ausgewählte Projekte</h3>
-            <h3 class="hidden print:block section-title">Ausgewählte Projekte</h3>
+            <h3 class="section-title text-2xl font-bold text-gray-900 mb-4 web-only border-b-2 border-blue-100 pb-2">Ausgewählte private Projekte</h3>
+            <h3 class="hidden print:block section-title">Ausgewählte private und Hochschul-Projekte</h3>
             
             <div class="space-y-4">
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                     <div class="timeline-date">Feb 2026</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Private Cloud Upgrades</h4>
-                        <p class="text-gray-700 mt-1">Upgrade der NextcloudPi Serverinfrastruktur auf ein reines <b>Docker</b>-Setup auf einem lokalen Ubuntu Server, hosting weiterer Services. Implementierung automatisierter remote Backups und Full-Stack-Monitoring mit Benachrichtigungen. Sicherer Remote-Zugriff über Cloudflare Tunnel.</p>
+                        <p class="text-gray-700 mt-1">Upgrade der NextcloudPi Serverinfrastruktur auf ein reines <b>Docker</b>-Setup auf einem lokalen Ubuntu Server, Hosting weiterer Services. Implementierung automatisierter remote Backups und Full-Stack-Monitoring mit Benachrichtigungen. Sicherer Remote-Zugriff über Cloudflare Tunnel.</p>
                     </div>
                 </div>
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                     <div class="timeline-date">Sep 2025</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Multi-Agent LLM System</h4>
                         <p class="text-gray-700 mt-1">Implementierung eines Multi-Agenten-Chatbots zur iterativen Weiterentwicklung von Ideen. Realisiert mit <b>LangChain, LangGraph</b> und ChainLit.</p>
                     </div>
                 </div>
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                     <div class="timeline-date">Sep 2024</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">ESP32 E-Ink Weather & Transit Display</h4>
                         <p class="text-gray-700 mt-1">Kopplung eines E-Ink-Displays mit einem ESP32 zur Anzeige von Wetter- und Nahverkehrsdaten. Ein lokal gehosteter <b>FastAPI</b>-Server aggregiert dafür Daten aus öffentlichen APIs.</p>
                     </div>
                 </div>
-                <div class="timeline-item bg-white p-4 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow break-inside-avoid">
+                <div class="timeline-item bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow break-inside-avoid">
                     <div class="timeline-date">Seit<br>2020</div>
                     <div class="timeline-content">
                         <h4 class="text-lg font-bold text-gray-900">Self-Hosted NextcloudPi Instanz</h4>
@@ -335,7 +336,7 @@
 
     </main>
 
-    <footer class="bg-gray-900 text-gray-300 py-6 web-only border-t border-gray-800 mt-12">
+    <footer class="bg-gray-900 text-gray-300 py-6 web-only border-t border-gray-200 mt-12">
         <div class="container mx-auto text-center px-4">
             <p class="text-sm">&copy; 2026 Niklas Küchen. Erstellt für Data Engineering & ML Rollen.</p>
         </div>
